@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
   coverImg: { type: String },
   browse: { type: Number, default: 0 },
   categories: [{ type: mongoose.SchemaTypes.ObjectId, ref: 'Category' }],
-  create_data: { type: Date, default: Date.now }
+  create_data: { type: Date, default: Date() }
 })
 
 module.exports = mongoose.model('Article', schema, 'articles')

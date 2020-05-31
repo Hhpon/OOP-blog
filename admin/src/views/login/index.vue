@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     async login() {
-      const res = await this.$http.post('login', this.model)
+      const res = await this.$http.post('user', this.model)
       sessionStorage.token = res.data.token
       sessionStorage.setItem('username', this.model.username)
       this.$router.push('/')
